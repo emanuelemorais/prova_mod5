@@ -13,15 +13,5 @@ class Game(Base):
     def __repr__(self) -> str:
         return f"id={self.id}, name={self.name}, platform={self.platform}, price={self.price}, amount={self.amount}"
     
-    def return_json(self):
-      return {
-         "id": self.id,
-         "name": self.name,
-         "platform": self.platform,
-         "price": self.price,
-         "amount":self.amount
-      }
-        
-    
     
 # - Crie os modelos necessários para representar um jogo eletrônico (Nome do Jogo, Plataforma, Preço e Quantidade). Utilize os tipos de dados necessários para realizar essa criação.
