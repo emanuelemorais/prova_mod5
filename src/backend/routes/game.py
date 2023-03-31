@@ -1,12 +1,12 @@
 from backend.controllers import game
-from flask import request, redirect, url_for
+from flask import request, redirect, url_for, render_template
 
 def inicia_app(app):
     @app.route('/games', methods=['GET'])
     def lista_jogos():
-        teste =  game.get_all_games()
-        print(teste)
-        return ''
+        games =  game.get_all_games()
+        print(games)
+        return render_template('index.html', games=games)
     
     @app.route('/new_game', methods=['POST'])
     def cria_novo_jogo():

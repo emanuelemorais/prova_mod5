@@ -7,6 +7,21 @@
     <title>Games</title>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Plataform</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+        {% for game in games %}
+        <tr>
+            <td>{{ game.name }}</td>
+            <td>{{ game.platform }}</td>
+            <td>{{ game.price }}</td>
+            <td>{{ game.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
