@@ -16,5 +16,5 @@ def inicia_app(app):
         amount =  request.form['amount']
         game.create_new_game(name, platform, price, amount)
         
-        return 'adicionou'
+        return redirect(url_for("lista_jogos"))
     
